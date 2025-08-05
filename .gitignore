@@ -40,6 +40,7 @@
 .idea
 sweet_b
 *.o
+*.d
 cmake-build-*
 callgrind.out.*
 *~
