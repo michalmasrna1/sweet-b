@@ -16,7 +16,7 @@ CFLAGS		+= -g -O2 \
 		   -Wundef -Wshadow \
 		   -I$(OPENCM3_DIR)/include -Iinclude \
 		   -fno-common $(ARCH_FLAGS) -ffunction-sections -fdata-sections -MD $(DEFINES)
-LDFLAGS		+= --static -Wl,--start-group -lc -lgcc -lnosys -Wl,--end-group \
+LDFLAGS		+= --static -Wl,--start-group -Wl,--strip-debug -lc -lgcc -lnosys -Wl,--end-group \
 		   -T$(LDSCRIPT) -nostartfiles -Wl,--gc-sections,--print-gc-sections \
 		   $(ARCH_FLAGS) \
 		   -L$(OPENCM3_DIR)/lib
